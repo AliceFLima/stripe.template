@@ -1,0 +1,16 @@
+tipo de dado que o frontend está enviando:
+
+{
+  "items": [
+    { "name": "nome.do.produto", "price": 10.00, "quantity": 3 }
+  ],
+  "currency": "brl"
+}
+
+o ideal é que o front envie o nome do produto e o back pegue o preço no banco do projeto
+
+o código de backend recebe um carrinho do front, cria um sessão de pagamento no stripe e atualiza o banco de dados conforme o pagamento
+
+para funcionar de verdade, é preciso gerar uma senha para o webhook do site oficial no stripe
+
+o cors foi usado para testar a api e nao deve ser implementado em um projeto real, já que as rotas devem estar protegidas

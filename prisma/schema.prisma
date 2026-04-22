@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Payment {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId 
+  stripeSessionId String   @unique  ////id da sessao do stripe
+  stripePaymentId String?  ////id do pagamento do stripe, se ele ocorrer
+  amount          Int     ////valor da compra
+  currency        String
+  status          String    /////pending, paid, failed
+  customerEmail   String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
