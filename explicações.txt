@@ -18,3 +18,5 @@ o cors (app.use(cors());) foi usado para testar a api e nao deve ser implementad
 precisa juntar a estrutura do banco de dados do pagamento com os produtos e os usuarios
 
 é preciso pensar ainda na autenticação, validação e proteção contra manipulação de dados
+
+se for o caso de usar um catalogo de produtos fixo, pode cadastrar os produtos no site do stripe e puxar o id e preço deles no back. o site do stripe tem tutoriais sobre isso
