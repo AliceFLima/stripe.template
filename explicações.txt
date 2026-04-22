@@ -11,6 +11,10 @@ o ideal é que o front envie o nome do produto e o back pegue o preço no banco 
 
 o código de backend recebe um carrinho do front, cria um sessão de pagamento no stripe e atualiza o banco de dados conforme o pagamento
 
-para funcionar de verdade, é preciso gerar uma senha para o webhook do site oficial no stripe
+para funcionar de verdade, é preciso gerar uma senha para o webhook no site oficial no stripe
 
-o cors foi usado para testar a api e nao deve ser implementado em um projeto real, já que as rotas devem estar protegidas
+o cors (app.use(cors());) foi usado para testar a api e nao deve ser implementado dessa forma em um projeto real. deve aceitar só requisiçoes oficiais
+
+precisa juntar a estrutura do banco de dados do pagamento com os produtos e os usuarios
+
+é preciso pensar ainda na autenticação, validação e proteção contra manipulação de dados
